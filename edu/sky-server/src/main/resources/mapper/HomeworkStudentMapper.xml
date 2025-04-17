@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sky.mapper.HomeworkStudentMapper">
+    <update id="update">
+        update homework_student
+        <set>
+            <if test="hsId != null">id = #{hsId},</if>
+            <if test="studentId != null">student_id = #{studentId},</if>
+            <if test="homeworkId != null">homework_id = #{homeworkId},</if>
+            <if test="homeworkScore != null">homework_score = #{homeworkScore},</if>
+            <if test="homeworkContent != null">homework_content = #{homeworkContent},</if>
+            <if test="homeworkUrl != null">homework_url =#{homeworkUrl},</if>
+            <if test="homeworkState != null">homework_state =#{homeworkState},</if>
+        </set>
+        where student_id = #{studentId} and homework_id = #{homeworkId}
+    </update>
+
+</mapper>

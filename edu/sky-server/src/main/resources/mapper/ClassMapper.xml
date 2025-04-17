@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sky.mapper.ClassMapper">
+    <update id="update">
+        update class
+        <set>
+            <if test="className != null">class_name = #{className},</if>
+            <if test="videoUrl != null">video_url =#{videoUrl},</if>
+            <if test="classContent != null">class_content =#{classContent},</if>
+        </set>
+        where class_id = #{classId}
+    </update>
+
+</mapper>
