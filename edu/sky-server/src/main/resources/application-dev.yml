@@ -1,0 +1,17 @@
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: webtest
+    username: root
+    password: a994715103
+  alioss:
+    endpoint: 
+    access-key-id: 
+    access-key-secret: 
+    bucket-name: 
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
